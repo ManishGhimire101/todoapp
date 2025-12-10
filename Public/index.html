@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TODO App</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div><h1>Todo app</h1></div>
+            <div>
+                <input type="text" placeholder="Search Your task">
+                <button onclick="display()">Add New</button>
+            </div>
+        </nav>
+    </header>
+    <div class="fild" id="fild" style="display: none;">
+        <div class="dateSection">
+            <input type="text" id="name" placeholder="Enter your task">
+            <input type="date" id="date">
+        </div>
+        <div>
+            <textarea name="Description" id="des" rows="10" cols="20" placeholder="Enter Your task details"></textarea>
+        </div>
+        <div style="gap: 10px;">
+            <button id="submit">Submit</button>
+            <button id="cancel" type="button">Cancel</button>
+        </div>
+    </div>
+    <div class="taskDisplay">
+        <h2>Your Tasks</h2>
+        <ul id="taskList">
+        </ul>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
