@@ -1,4 +1,4 @@
-const API_URL = 'https://todobymanis.netlify.app';
+const API_URL = 'https://todobymanis.netlify.app/api';
 
 // Display the form
 const display = () => {
