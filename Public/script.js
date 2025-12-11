@@ -126,7 +126,9 @@ window.addEventListener('load', () => {
 });
 const searchInput = document.getElementById('Search');
 let todologo = document.getElementById('todologo');
+const mediaQuery = window.matchMedia('(max-width: 568px)');
 
+if (mediaQuery.matches) {
 searchInput.addEventListener('focus', () => {
     todologo.style.display = 'none';
-});
+})}
