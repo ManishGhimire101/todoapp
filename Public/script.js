@@ -124,3 +124,9 @@ async function deleteTask(id) {
 window.addEventListener('load', () => {
     fetchTasks();
 });
+const searchInput = document.getElementById('Search');
+let todologo = document.getElementById('todologo');
+
+searchInput.addEventListener('focus', () => {
+    todologo.style.display = 'none';
+});
