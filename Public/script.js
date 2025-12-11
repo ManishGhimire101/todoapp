@@ -1,4 +1,6 @@
-const API_URL = 'https://todobymanis.netlify.app/api';
+const API_URL = window.location.hostname === 'localhost' 
+    ? 'http://localhost:3000/api/tasks'
+    : 'https://todobymanis.up.railway.app/api/tasks';
 
 // Display the form
 const display = () => {

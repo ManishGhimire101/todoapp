@@ -5,6 +5,7 @@ import url from 'node:url';
 
 const __dirname = url.fileURLToPath(new URL('.', import.meta.url));
 const dataFilePath = path.join(__dirname, 'database', 'data.json');
+console.log(dataFilePath);
 
 // Helper function to read tasks from database
 function readTasks() {
