@@ -1,4 +1,4 @@
-const API_URL = 'http://localhost:3000/api/tasks';
+const API_URL = 'https://todobymanis.netlify.app';
 
 // Display the form
 const display = () => {
@@ -11,14 +11,14 @@ document.getElementById('cancel').addEventListener('click', () => {
     clearForm();
 });
 
-// Clear form inputs
+
 function clearForm() {
     document.getElementById('name').value = '';
     document.getElementById('date').value = '';
     document.getElementById('des').value = '';
 }
 
-// Fetch all tasks from API
+
 async function fetchTasks() {
     try {
         const response = await fetch(API_URL);
@@ -29,7 +29,7 @@ async function fetchTasks() {
     }
 }
 
-// Display tasks on the page
+
 function displayTasks(tasks) {
     const taskList = document.getElementById('taskList');
     taskList.innerHTML = '';
@@ -51,7 +51,7 @@ function displayTasks(tasks) {
     });
 }
 
-// Submit form to create a new task
+
 document.getElementById('submit').addEventListener('click', async (e) => {
     e.preventDefault();
     
@@ -85,7 +85,7 @@ document.getElementById('submit').addEventListener('click', async (e) => {
             console.log('Task created:', createdTask);
             clearForm();
             document.getElementById('fild').style.display = 'none';
-            fetchTasks(); // Refresh the task list
+            fetchTasks(); 
         } else {
             alert('Error creating task');
         }
@@ -95,7 +95,7 @@ document.getElementById('submit').addEventListener('click', async (e) => {
     }
 });
 
-// Delete a task
+
 async function deleteTask(id) {
     if (!confirm('Are you sure you want to delete this task?')) {
         return;
@@ -108,7 +108,7 @@ async function deleteTask(id) {
 
         if (response.ok) {
             console.log('Task deleted');
-            fetchTasks(); // Refresh the task list
+            fetchTasks(); 
         } else {
             alert('Error deleting task');
         }
@@ -118,7 +118,7 @@ async function deleteTask(id) {
     }
 }
 
-// Load tasks on page load
+
 window.addEventListener('load', () => {
     fetchTasks();
 });

@@ -15,6 +15,7 @@ function readTasks() {
       return { tasks: [] };
    }
 }
+console.log(readTasks());
 
 // Helper function to write tasks to database
 function writeTasks(data) {
