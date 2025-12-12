@@ -1,39 +1,52 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>TODO App</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
     <header>
-        <nav>
-            <div><h1 id="todologo">Todo app</h1></div>
-            <div>
-                <input id="Search" type="text" placeholder="Search Your task">
-                <button onclick="display()">Add New</button>
-            </div>
-        </nav>
-    </header>
-    <div class="fild" id="fild" style="display: none;">
-        <div class="dateSection">
-            <input type="text" id="name" placeholder="Enter your task">
-            <input type="date" id="date">
-        </div>
+      <nav>
+        <div><h1 id="todologo">Todo app</h1></div>
         <div>
-            <textarea name="Description" id="des" rows="10" cols="20" placeholder="Enter Your task details"></textarea>
+          <input id="Search" type="text" placeholder="Search Your task" />
+          <button onclick="display()">Add New</button>
         </div>
-        <div style="gap: 10px;">
-            <button id="submit">Submit</button>
-            <button id="cancel" type="button">Cancel</button>
-        </div>
+      </nav>
+
+      <input
+        type="file"
+        id="fileInput"
+        accept="image/*"
+        style="display: none"
+      />
+    </header>
+    <div class="fild" id="fild" style="display: none">
+      <div class="dateSection">
+        <input type="text" id="name" placeholder="Enter your task" />
+        <input type="date" id="date" />
+      </div>
+      <div>
+        <textarea
+          name="Description"
+          id="des"
+          rows="10"
+          cols="20"
+          placeholder="Enter Your task details"
+        ></textarea>
+        <div id="img-feild" name="image"></div>
+      </div>
+      <div style="gap: 10px">
+        <button id="submit">Submit</button>
+        <button id="cancel" type="button">Cancel</button>
+      </div>
     </div>
     <div class="taskDisplay">
-        <h2>Your Tasks</h2>
-        <ul id="taskList">
-        </ul>
+      <h2>Your Tasks</h2>
+      <ul id="taskList"></ul>
     </div>
     <script src="script.js"></script>
-</body>
+  </body>
 </html>
